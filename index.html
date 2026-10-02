@@ -7,12 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#e6e9ee;--card:#fff;--ink:#0c1016;--mute:#5f6b7a;--line:#d3d9e1;--hero:#2340ff;--acc:#2340ff;--onacc:#fff;--pos:#12a05c;box-sizing:border-box;--st:calc(max(env(safe-area-inset-top,0px),var(--tg-safe-area-inset-top,0px)) + var(--tg-content-safe-area-inset-top,0px));--sb:max(env(safe-area-inset-bottom,0px),var(--tg-safe-area-inset-bottom,0px));padding-top:var(--st)}
+:root{--bg:#e6e9ee;--card:#fff;--ink:#0c1016;--mute:#5f6b7a;--line:#d3d9e1;--hero:#2340ff;--acc:#2340ff;--onacc:#fff;--pos:#12a05c;box-sizing:border-box;--st:calc(max(env(safe-area-inset-top,0px),var(--tg-safe-area-inset-top,0px)) + var(--tg-content-safe-area-inset-top,0px));--sb:max(env(safe-area-inset-bottom,0px),var(--tg-safe-area-inset-bottom,0px))}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0a0d12;--card:#141a22;--ink:#f1f4f8;--mute:#8592a3;--line:#232c37;--hero:#2f4bff;--acc:#8a9cff;--onacc:#0a0d12}}
 :root[data-theme=dark]{--bg:#0a0d12;--card:#141a22;--ink:#f1f4f8;--mute:#8592a3;--line:#232c37;--hero:#2f4bff;--acc:#8a9cff;--onacc:#0a0d12}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 Onest,system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums}
-#app{padding:14px 14px calc(96px + var(--sb))}
+/* Telegram fullscreen: keep app content below Telegram's top controls. */
+#app{padding:calc(14px + var(--st)) 14px calc(96px + var(--sb))}
 .d{font-family:Unbounded,system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.08}
 h1{font-size:26px;margin:14px 0 4px}h2{font-size:16px;margin:26px 0 10px}
 .mute{color:var(--mute);font-size:14px}.rel{position:relative}
